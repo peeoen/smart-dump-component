@@ -1,0 +1,19 @@
+<button class="btn btn-primary" (click)="search()">Search</button>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4 col-sm-6 col-12" *ngFor="let tarvel of tarvels">
+      <app-travel-place [image]="tarvel.image" [service]="tarvel.service" [travel]="tarvel.travel"
+        [title]="tarvel.title"></app-travel-place>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-12">
+      <div class="comp-test">
+        <app-travel-place *ngIf="tarvels.length > 0" [image]="tarvels[0].image" [service]="tarvels[0].service"
+          [travel]="tarvels[0].travel" [title]="tarvels[0].title"></app-travel-place>
+      </div>
+    </div>
+  </div>
+</div>
